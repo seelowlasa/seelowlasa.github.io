@@ -11,19 +11,20 @@
         }
 
         body {
-            background-color: #90EE90;
+            background: linear-gradient(135deg, #90EE90 0%, #7FD87F 100%);
             background-image: url('images/background.svg');
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
             color: #333;
+            min-height: 100vh;
         }
 
         table {
             background-color: white;
-            border: 2px solid #ddd;
+            border: none;
             border-collapse: collapse;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
             overflow: hidden;
         }
 
@@ -35,60 +36,79 @@
 
         /* Header styling */
         td[bgcolor="darkgreen"] {
-            background-color: #2d5016 !important;
+            background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
             background-image: url('images/jaring-teal.svg');
-            padding: 20px 12px;
+            background-blend-mode: overlay;
+            padding: 30px 12px;
+            border: none;
         }
 
         td[bgcolor="darkgreen"] h1 {
-            font-size: 2.5em;
+            font-size: 2.8em;
             margin: 10px 0;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.5);
+            font-weight: 700;
+            letter-spacing: 2px;
         }
 
         td[bgcolor="darkgreen"] em {
-            font-size: 1.1em;
+            font-size: 1.2em;
             font-style: italic;
-            opacity: 0.95;
+            opacity: 0.98;
+            font-weight: 300;
         }
 
         /* Navigation styling */
         td[bgcolor="lightblue"] {
-            background-color: #87CEEB !important;
+            background: linear-gradient(135deg, #87CEEB 0%, #6AB3D8 100%);
             padding: 15px 12px;
-            border-bottom: 3px solid #4A90E2;
+            border: none;
         }
 
         td[bgcolor="lightblue"] a {
             text-decoration: none;
-            color: #0066cc;
+            color: white;
             font-weight: 600;
-            padding: 5px 10px;
-            margin: 0 5px;
+            padding: 8px 15px;
+            margin: 0 8px;
             transition: all 0.3s ease;
-            border-radius: 4px;
+            border-radius: 6px;
+            display: inline-block;
+            background-color: rgba(255, 255, 255, 0.2);
+            border: 2px solid transparent;
         }
 
         td[bgcolor="lightblue"] a:hover {
             background-color: #4A90E2;
             color: white;
-            text-decoration: underline;
+            text-decoration: none;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.4);
+            border-color: white;
         }
 
         /* Content area styling */
         td[width="75%"] {
             background-color: white !important;
-            padding: 20px 12px;
+            padding: 30px 25px;
             vertical-align: top;
+            border: none;
         }
 
         td[width="75%"] h3 {
             color: #2d5016;
-            margin-top: 20px;
-            margin-bottom: 10px;
-            font-size: 1.4em;
-            border-left: 4px solid #2d5016;
-            padding-left: 12px;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.6em;
+            border-left: 5px solid #4A90E2;
+            padding-left: 15px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+        }
+
+        td[width="75%"] h3:hover {
+            color: #4A90E2;
+            padding-left: 20px;
         }
 
         td[width="75%"] h3:first-child {
@@ -98,75 +118,85 @@
         td[width="75%"] p {
             margin-bottom: 12px;
             text-align: justify;
+            line-height: 1.8;
+            color: #555;
         }
 
         td[width="75%"] small {
-            color: #666;
+            color: #999;
+            font-size: 0.9em;
         }
 
         td[width="75%"] hr {
             border: none;
-            border-top: 2px solid #ddd;
-            margin: 20px 0;
+            border-top: 2px solid #e0e0e0;
+            margin: 25px 0;
         }
 
         td[width="75%"] a {
-            color: #0066cc;
+            color: #4A90E2;
             text-decoration: none;
             font-weight: 600;
             transition: all 0.3s ease;
+            border-bottom: 2px solid transparent;
+            padding-bottom: 2px;
         }
 
         td[width="75%"] a:hover {
-            color: #004999;
-            text-decoration: underline;
+            color: #2d5016;
+            text-decoration: none;
+            border-bottom: 2px solid #2d5016;
         }
 
         /* Sidebar styling */
         td[width="25%"] {
-            background-color: #d3d3d3 !important;
-            padding: 20px 12px;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            padding: 30px 20px;
             vertical-align: top;
-            border-left: 2px solid #999;
+            border: none;
         }
 
         td[width="25%"] p {
             font-weight: 700;
             color: #2d5016;
-            margin-bottom: 15px;
-            font-size: 1.1em;
+            margin-bottom: 20px;
+            font-size: 1.15em;
         }
 
         td[width="25%"] ol {
-            margin-left: 20px;
+            margin-left: 25px;
         }
 
         td[width="25%"] li {
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
 
         td[width="25%"] a {
-            color: #0066cc;
+            color: #4A90E2;
             text-decoration: none;
             transition: all 0.3s ease;
             font-weight: 500;
+            display: inline-block;
         }
 
         td[width="25%"] a:hover {
-            color: #004999;
+            color: #2d5016;
             text-decoration: underline;
-            padding-left: 5px;
+            padding-left: 8px;
+            transform: translateX(3px);
         }
 
         /* Footer styling */
         td[bgcolor="black"] {
-            background-color: #1a1a1a !important;
-            padding: 15px 12px;
+            background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+            padding: 20px 12px;
             text-align: right;
+            border: none;
         }
 
         td[bgcolor="black"] small {
-            color: #ccc;
+            color: #bbb;
+            font-size: 0.95em;
         }
 
         /* Responsive text sizing */
@@ -182,6 +212,21 @@
         /* Remove deprecated font tag styling with graceful CSS */
         font[color="white"] {
             color: white !important;
+        }
+
+        /* Additional enhancement for article sections */
+        td[width="75%"] p:first-of-type {
+            font-weight: 500;
+            line-height: 1.9;
+        }
+
+        /* Smooth table borders */
+        tr:first-child td {
+            border-top: none;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
         }
     </style>
 </head>
