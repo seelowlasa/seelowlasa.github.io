@@ -4,6 +4,21 @@
     <title>Seelowlasa</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
      <style>
+        :root{
+            --page-bg-1: #0f1724;
+            --page-bg-2: #1e293b;
+            --card-bg: #f8fafc;
+            --header-1: #2b1b59;
+            --header-2: #0f254d;
+            --nav-1: #ff7a59;
+            --nav-2: #ff9a76;
+            --accent: #ffb86b;
+            --link: #7dd3fc;
+            --text-dark: #1f2937;
+            --muted: #64748b;
+            --footer-bg: #0b1220;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -11,21 +26,21 @@
         }
 
         body {
-            background: linear-gradient(135deg, #90EE90 0%, #7FD87F 100%);
+            background: linear-gradient(135deg, var(--page-bg-1) 0%, var(--page-bg-2) 100%);
             background-image: url('images/background.svg');
             background-attachment: fixed;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             line-height: 1.6;
-            color: #333;
+            color: var(--text-dark);
             min-height: 100vh;
             padding: 20px 0;
         }
 
         table {
-            background-color: white;
+            background-color: var(--card-bg);
             border: none;
             border-collapse: collapse;
-            box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 15px 50px rgba(2,6,23,0.45);
             border-radius: 15px;
             overflow: hidden;
             margin: 0 auto;
@@ -34,12 +49,12 @@
         th, td {
             padding: 12px;
             text-align: left;
-            border: 1px solid #e5e5e5;
+            border: 1px solid #e6eef8;
         }
 
         /* Header styling */
         td[bgcolor="darkgreen"] {
-            background: linear-gradient(135deg, #2d5016 0%, #1a3009 100%);
+            background: linear-gradient(135deg, var(--header-1) 0%, var(--header-2) 100%);
             background-image: url('images/jaring-teal.svg');
             background-blend-mode: overlay;
             padding: 40px 12px;
@@ -55,14 +70,14 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: radial-gradient(circle at top right, rgba(255,255,255,0.1), transparent);
+            background: radial-gradient(circle at top right, rgba(255,255,255,0.03), transparent);
             pointer-events: none;
         }
 
         td[bgcolor="darkgreen"] h1 {
             font-size: 3em;
             margin: 10px 0;
-            text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.6);
+            text-shadow: 3px 3px 12px rgba(0, 0, 0, 0.6);
             font-weight: 800;
             letter-spacing: 2px;
             position: relative;
@@ -71,60 +86,60 @@
         }
 
         td[bgcolor="darkgreen"] em {
-            font-size: 1.3em;
+            font-size: 1.1em;
             font-style: italic;
-            opacity: 1;
+            opacity: 0.9;
             font-weight: 300;
             position: relative;
             z-index: 1;
-            color: #e0e0e0;
+            color: #e6eef8;
         }
 
         /* Navigation styling */
         td[bgcolor="lightblue"] {
-            background: linear-gradient(90deg, #87CEEB 0%, #6AB3D8 100%);
-            padding: 18px 12px;
+            background: linear-gradient(90deg, var(--nav-1) 0%, var(--nav-2) 100%);
+            padding: 14px 12px;
             border: none;
-            box-shadow: 0 4px 12px rgba(74, 144, 226, 0.2);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            text-align: center;
         }
 
         td[bgcolor="lightblue"] a {
             text-decoration: none;
             color: white;
             font-weight: 700;
-            padding: 10px 18px;
-            margin: 0 5px;
-            transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+            padding: 10px 16px;
+            margin: 0 6px;
+            transition: all 0.25s cubic-bezier(0.34, 1.56, 0.64, 1);
             border-radius: 8px;
             display: inline-block;
-            background-color: rgba(255, 255, 255, 0.25);
-            border: 2px solid rgba(255, 255, 255, 0.4);
+            background-color: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
             font-size: 0.95em;
         }
 
         td[bgcolor="lightblue"] a:hover {
-            background-color: #fff;
-            color: #2d5016;
-            text-decoration: none;
+            background-color: rgba(255,255,255,0.9);
+            color: var(--header-2);
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-            border-color: #fff;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+            border-color: rgba(255,255,255,0.9);
         }
 
         /* Content area styling */
         td[width="75%"] {
-            background-color: white !important;
+            background-color: transparent !important;
             padding: 35px 30px;
             vertical-align: top;
             border: none;
         }
 
         td[width="75%"] h3 {
-            color: #2d5016;
+            color: var(--nav-1);
             margin-top: 30px;
             margin-bottom: 15px;
             font-size: 1.7em;
-            border-left: 6px solid #4A90E2;
+            border-left: 6px solid var(--accent);
             padding-left: 18px;
             font-weight: 800;
             transition: all 0.3s ease;
@@ -132,9 +147,9 @@
         }
 
         td[width="75%"] h3:hover {
-            color: #4A90E2;
+            color: var(--accent);
             padding-left: 25px;
-            box-shadow: 4px 0 10px rgba(74, 144, 226, 0.2);
+            box-shadow: 4px 0 10px rgba(255,184,107,0.12);
         }
 
         td[width="75%"] h3:first-child {
@@ -145,54 +160,54 @@
             margin-bottom: 15px;
             text-align: justify;
             line-height: 1.9;
-            color: #555;
+            color: var(--muted);
             font-size: 1.02em;
         }
 
         td[width="75%"] small {
-            color: #aaa;
+            color: #9aa4b2;
             font-size: 0.9em;
             font-weight: 500;
         }
 
         td[width="75%"] hr {
             border: none;
-            border-top: 2px solid #f0f0f0;
+            border-top: 2px solid rgba(15,20,36,0.04);
             margin: 30px 0;
-            background: linear-gradient(90deg, transparent, #ddd, transparent);
+            background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06), transparent);
         }
 
         td[width="75%"] a {
-            color: #4A90E2;
+            color: var(--link);
             text-decoration: none;
             font-weight: 700;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             border-bottom: 2px solid transparent;
             padding-bottom: 2px;
             display: inline-block;
         }
 
         td[width="75%"] a:hover {
-            color: #2d5016;
+            color: var(--nav-2);
             text-decoration: none;
-            border-bottom: 2px solid #2d5016;
+            border-bottom: 2px solid var(--nav-2);
             transform: translateX(5px);
         }
 
         /* Sidebar styling */
         td[width="25%"] {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e8ecf1 100%);
+            background: linear-gradient(135deg, #f6f8fb 0%, #eef4fb 100%);
             padding: 35px 25px;
             vertical-align: top;
             border: none;
-            border-left: 3px solid #4A90E2;
+            border-left: 3px solid var(--accent);
         }
 
         td[width="25%"] p {
             font-weight: 800;
-            color: #2d5016;
+            color: var(--header-1);
             margin-bottom: 25px;
-            font-size: 1.2em;
+            font-size: 1.1em;
             text-transform: uppercase;
             letter-spacing: 1px;
         }
@@ -204,12 +219,13 @@
         td[width="25%"] li {
             margin-bottom: 15px;
             font-weight: 500;
+            color: var(--muted);
         }
 
         td[width="25%"] a {
-            color: #4A90E2;
+            color: var(--link);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.25s ease;
             font-weight: 600;
             display: inline-block;
             position: relative;
@@ -222,12 +238,12 @@
             left: 0;
             width: 0;
             height: 2px;
-            background-color: #2d5016;
+            background-color: var(--header-2);
             transition: width 0.3s ease;
         }
 
         td[width="25%"] a:hover {
-            color: #2d5016;
+            color: var(--header-2);
             text-decoration: none;
             transform: translateX(5px);
         }
@@ -238,7 +254,7 @@
 
         /* Footer styling */
         td[bgcolor="black"] {
-            background: linear-gradient(90deg, #1a1a1a 0%, #0d0d0d 100%);
+            background: linear-gradient(90deg, var(--footer-bg) 0%, #061022 100%);
             padding: 20px 12px;
             text-align: right;
             border: none;
@@ -246,7 +262,7 @@
         }
 
         td[bgcolor="black"] small {
-            color: #ccc;
+            color: #9aa4b2;
             font-size: 0.95em;
             font-weight: 500;
         }
@@ -270,7 +286,7 @@
         td[width="75%"] p:first-of-type {
             font-weight: 500;
             line-height: 1.95;
-            color: #444;
+            color: #344054;
         }
 
         /* Smooth transitions */
@@ -306,12 +322,12 @@
 
         /* Subtle hover effect on content area */
         td[width="75%"]:hover {
-            background-color: #fafafa;
+            background-color: rgba(255,255,255,0.02);
         }
     </style>
 </head>
 
-<body bgcolor="lightgreen" background="images/background.svg">
+<body background="images/background.svg">
     <!-- Halaman web tanpa CSS. Murni hanya memakai HTML -->
     <p>&nbsp;</p>
     <table border="1" width="800px" cellpadding="12px" align="center" bgcolor="white">
